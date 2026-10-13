@@ -12,9 +12,13 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
-    name: Deploy Azure Infrastructure
+terraform-init-plan:
+    name: Terraform Init and Validate and plan
+    needs: lint-and-scan
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./environments/dev
 
     steps:
       - name: Checkout Code
