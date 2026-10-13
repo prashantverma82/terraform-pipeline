@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-terraform-init-plan:
+  terraform-init-plan:
     name: Terraform Init and Validate and plan
     needs: lint-and-scan
     runs-on: ubuntu-latest
