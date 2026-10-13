@@ -22,15 +22,12 @@ jobs:
 
       #  - name: Azure Login
       #   uses: azure/login@v2
-        with:
-          client-id: "ed15ead0-8d94-43b2-95f1-c4b7edf00d49"
-          tenant-id: "13a90dd3-c304-4d66-9916-00384649678d"
-          subscription-id: "f32c28c1-3f2c-4fb4-befa-70b5926fbe48"
+        # with:
+        #   client-id: "ed15ead0-8d94-43b2-95f1-c4b7edf00d49"
+        #   tenant-id: "13a90dd3-c304-4d66-9916-00384649678d"
+        #   subscription-id: "f32c28c1-3f2c-4fb4-befa-70b5926fbe48"
 
-      - name: Register Azure Compute Provider
-        run: |
-          az provider register --namespace Microsoft.Compute
-
+    
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
